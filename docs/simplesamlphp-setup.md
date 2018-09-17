@@ -32,20 +32,6 @@ Request the remote IdP metadata (XML) from the customer. Note that each environm
 
 1. Edit `${project.root}/simplesamlphp/config/acquia_config.php` as follows:
 
-      1. Update your database name in `$ah_options`:
-
-              $ah_options = array(
-                // Use the database "role" without the "stage", e.g., "example", not
-                // "exampletest" or "exampleprod".
-                'database_name' => 'example',
-                'session_store' => array(
-                  // Valid values are "memcache" and "database".
-                  'prod' => 'database',
-                  'test' => 'database',
-                  'dev'  => 'database',
-                ),
-              );
-
       1. Amend the default values for the simplesaml session store if desired.
          Note, memcache is only supported on PHP < 7 as tagged versions of the
          simplesaml library only support php-memcache rather than the more
